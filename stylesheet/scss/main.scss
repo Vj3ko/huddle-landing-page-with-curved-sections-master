@@ -1,0 +1,32 @@
+@import "variables";
+@import "header";
+@import "section-main";
+@import "article";
+@import "community";
+@import "footer";
+
+// reset to default
+*,
+*::before,
+*::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: $body-font;
+}
+
+p {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: $dk-Cyan;
+      line-height:1.7;
+}
+
+a {
+      text-transform: capitalize;
+      text-decoration: none;
+}
+

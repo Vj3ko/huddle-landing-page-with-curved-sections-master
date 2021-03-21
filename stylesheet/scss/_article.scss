@@ -1,0 +1,99 @@
+.article {
+      text-align: center;
+      position: relative;
+      margin-top: 2.5rem;
+      margin-bottom: 7rem;
+      padding: 1.875rem;
+
+      &.grow {
+            background: $pale-Blue;
+      }
+
+      &.grow::before {
+            content: "";
+            background: url(../../images/bg-section-top-mobile-1.svg) top
+                  no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            top: -6.1875rem;
+            left: 0;
+            width: 100%;
+            height: 6.25rem;
+      }
+
+      &.grow::after {
+            content: "";
+            background: url(../../images/bg-section-bottom-mobile-1.svg) bottom
+                  no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            bottom: -3.0625rem;
+            left: 0;
+            width: 100%;
+            height: 3.125rem;
+      }
+
+      &__img {
+            background: url(../../images/illustration-grow-together.svg) center
+                  no-repeat;
+            height: 13.4375rem;
+            background-size: contain;
+      }
+
+      &__title {
+            font-size: 1.25rem;
+            font-family: $headings-font;
+            margin-top: 5rem;
+      }
+
+      &__description {
+            margin-top: 1.25rem;
+            padding-bottom: 2rem;
+      }
+
+      &.flow {
+            .article__img {
+                  background: url(../../images/illustration-flowing-conversation.svg)
+                        center no-repeat;
+                  height: 13.4375rem;
+                  background-size: contain;
+                  margin-top: 5rem;
+            }
+      }
+
+      &.user {
+            background: $pale-Blue;
+
+            .article__img {
+                  background: url(../../images/illustration-your-users.svg)
+                        center no-repeat;
+                  height: 13.4375rem;
+                  background-size: contain;
+            }
+
+            &::before {
+                  content: "";
+                  background: url(../../images/bg-section-top-mobile-2.svg) top
+                        no-repeat;
+                  background-size: 100% 100%;
+                  position: absolute;
+                  top: -6.1875rem;
+                  left: 0;
+                  width: 100%;
+                  height: 6.25rem;
+            }
+
+            &::after {
+                  content: "";
+                  background: url(../../images/bg-section-bottom-mobile-2.svg)
+                        bottom no-repeat;
+                  background-size: 100% 100%;
+                  position: absolute;
+                  bottom: -6.1875rem;
+                  left: 0;
+                  width: 100%;
+                  height: 6.25rem;
+                  
+            }
+      }
+}

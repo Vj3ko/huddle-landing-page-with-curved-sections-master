@@ -1,0 +1,100 @@
+.footer {
+      position: relative;
+      background: $dk-Cyan;
+      color: #fff;
+      padding: 2.75rem 1.6875rem;
+
+      &::before {
+            content: "";
+            background: url(../../images/bg-footer-top-mobile.svg) top no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            top: -2.875rem;
+            left: 0;
+            width: 100%;
+            height: 3.125rem;
+      }
+
+      &__newsletter h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+      }
+
+      p {
+            color: lightgray;
+            margin-top: 1.875rem;
+            margin-bottom: 2.5rem;
+      }
+
+      form {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                  height: 3.125rem;
+                  border-radius: 0.3125rem;
+                  border: none;
+            }
+
+            button {
+                  font-size: 1rem;
+                  font-weight: 500;
+                  width: 50%;
+                  height: 3.125rem;
+                  align-self: flex-end;
+                  margin-top: 1rem;
+                  margin-bottom: 6.25rem;
+                  border-radius: 0.3125rem;
+                  border: none;
+                  color: #fff;
+                  background: $pink;
+                  cursor: pointer;
+            }
+      }
+
+      &__content {
+            // &_logo {
+
+            // }
+
+            .footer__info {
+                  margin-top: 0.625rem;
+            }
+
+            .footer__contact {
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: center;
+                  margin-bottom: 1rem;
+
+                  img {
+                        margin-right: 1rem;
+                  }
+
+                  p {
+                        margin: 0;
+                        opacity: 0.8;
+                        font-weight: 500;
+                  }
+            }
+      }
+
+      &__social {
+            margin-top: 3.125rem;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+
+            i {
+                  font-size: 25px;
+                  cursor: pointer;
+
+                  &:nth-child(1),
+                  &:nth-child(2) {
+                        margin-right: 1rem;
+                  }
+            }
+      }
+}
