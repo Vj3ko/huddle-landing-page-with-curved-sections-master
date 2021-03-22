@@ -2,7 +2,7 @@
 const form = document.querySelector("#form");
 const input = document.querySelector("#email");
 const small = document.querySelector(".js-show");
-const btn = document.querySelector("#submit-btn")
+const btn = document.querySelector("#submit-btn");
 
 // event listener for submit, preventing default behaviour
 form.addEventListener('submit', (e) => {
