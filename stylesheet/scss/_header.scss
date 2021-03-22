@@ -6,8 +6,22 @@
       margin-right: 1.5625rem;
       margin-top: 1.75rem;
 
+      @include responsive("tablet") {
+            margin-left: 4.875rem;
+            margin-right: 4.875rem;
+            margin-top: 4.875rem;
+      }
+
       &__logo {
             width: 6rem;
+
+            @include responsive("tablet") {
+                  width: 10rem;
+            }
+
+            @include responsive("laptop") {
+                  width: 15rem;
+            }
       }
 
       & a {
@@ -16,5 +30,20 @@
             color: $pink;
             border: 1px solid $pink;
             border-radius: 2rem;
+            transition: all 300ms ease-in-out;
+
+            &:hover {
+                  border-color: $lt-Pink;
+                  color: $lt-Pink;
+                  opacity: 0.8;
+            }
+
+            @include responsive("tablet") {
+                  padding: 0.5rem 1.25rem;
+            }
+
+            @include responsive("laptop") {
+                  padding: 0.75rem 2rem;
+            }
       }
 }

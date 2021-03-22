@@ -1,8 +1,12 @@
 .community {
       text-align: center;
-      margin-top:4.375rem;
+      margin-top: 4.375rem;
       margin-bottom: 17rem;
-      
+
+      @include responsive("laptop") {
+            margin-top: 15rem;
+      }
+
       &__title {
             @extend .main__title;
             margin-bottom: 3rem;

@@ -5,6 +5,14 @@
       margin-bottom: 7rem;
       padding: 1.875rem;
 
+      @include responsive("tablet") {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            text-align: left;
+            margin-top: 13rem;
+      }
+
       &.grow {
             background: $pale-Blue;
       }
@@ -19,6 +27,17 @@
             left: 0;
             width: 100%;
             height: 6.25rem;
+
+            @include responsive("tablet") {
+                  background: url(../../images/bg-section-top-desktop-1.svg) top
+                        no-repeat;
+                  background-size: 100% 100%;
+                  position: absolute;
+                  top: -9.1875rem;
+                  left: 0;
+                  width: 100%;
+                  height: 9.25rem;
+            }
       }
 
       &.grow::after {
@@ -31,6 +50,17 @@
             left: 0;
             width: 100%;
             height: 3.125rem;
+
+            @include responsive("tablet") {
+                  background: url(../../images/bg-section-bottom-desktop-1.svg)
+                        bottom no-repeat;
+                  background-size: 100% 100%;
+                  position: absolute;
+                  bottom: -9.0625rem;
+                  left: 0;
+                  width: 100%;
+                  height: 9.125rem;
+            }
       }
 
       &__img {
@@ -38,26 +68,67 @@
                   no-repeat;
             height: 13.4375rem;
             background-size: contain;
+
+            @include responsive("tablet") {
+                  height: 26rem;
+                  width: 100%;
+            }
       }
 
       &__title {
             font-size: 1.25rem;
             font-family: $headings-font;
             margin-top: 5rem;
+
+            @include responsive("tablet") {
+                  font-size: 2rem;
+            }
+
+            @include responsive("laptop") {
+                  font-size: 2.8125rem;
+            }
       }
 
       &__description {
             margin-top: 1.25rem;
             padding-bottom: 2rem;
+
+            @include responsive("tablet") {
+                  font-size: 0.875rem;
+            }
+
+            @include responsive("laptop") {
+                  font-size: 1rem;
+            }
+      }
+
+      &__container {
+            @include responsive("tablet") {
+                  flex-basis: 100%;
+            }
+
+            @include responsive("laptop") {
+                  padding: 6.25rem;
+                  padding-top: 0;
+            }
       }
 
       &.flow {
+            @include responsive("tablet") {
+                  flex-direction: row;
+            }
+
             .article__img {
                   background: url(../../images/illustration-flowing-conversation.svg)
                         center no-repeat;
                   height: 13.4375rem;
                   background-size: contain;
                   margin-top: 5rem;
+
+                  @include responsive("laptop") {
+                        height: 26rem;
+                        width: 100%;
+                  }
             }
       }
 
@@ -69,6 +140,11 @@
                         center no-repeat;
                   height: 13.4375rem;
                   background-size: contain;
+
+                  @include responsive("laptop") {
+                        height: 26rem;
+                        width: 100%;
+                  }
             }
 
             &::before {
@@ -81,6 +157,17 @@
                   left: 0;
                   width: 100%;
                   height: 6.25rem;
+
+                  @include responsive("tablet") {
+                        background: url(../../images/bg-section-top-desktop-2.svg)
+                              top no-repeat;
+                        background-size: 100% 100%;
+                        position: absolute;
+                        top: -9.1875rem;
+                        left: 0;
+                        width: 100%;
+                        height: 9.25rem;
+                  }
             }
 
             &::after {
@@ -93,7 +180,17 @@
                   left: 0;
                   width: 100%;
                   height: 6.25rem;
-                  
+
+                  @include responsive("tablet") {
+                        background: url(../../images/bg-section-bottom-desktop-2.svg)
+                              bottom no-repeat;
+                        background-size: 100% 100%;
+                        position: absolute;
+                        bottom: -9.0625rem;
+                        left: 0;
+                        width: 100%;
+                        height: 9.125rem;
+                  }
             }
       }
 }

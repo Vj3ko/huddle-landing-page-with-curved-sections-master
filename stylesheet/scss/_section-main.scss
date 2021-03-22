@@ -4,24 +4,50 @@
       margin: auto;
       margin-top: 7.875rem;
 
+      @include responsive("laptop") {
+            margin-top: 15rem;
+      }
+
       &__title {
             font-size: 1.5rem;
             font-family: $headings-font;
+
+            @include responsive("laptop") {
+                  font-size: 3rem;
+            }
       }
 
       &__info {
             margin-top: 2.1875rem;
             margin-bottom: 3.125rem;
+
+            @include responsive("tablet") {
+                  max-width: 37.5rem;
+                  margin: auto;
+                  font-size: 1.1875rem;
+                  margin-top: 2.5rem;
+                  margin-bottom: 3.125rem;
+            }
       }
 
       &-btn {
             color: #fff;
+            display: inline-block;
             background-color: $pink;
             font-size: 0.875rem;
             font-weight: 600;
             border-radius: 4rem;
             padding: 0.875rem 2.625rem;
             box-shadow: 0px 2px 10px rgba(#000000, 0.3);
+            transition: background-color 300ms ease-in-out;
+
+            &:hover {
+                  background-color: $lt-Pink;
+            }
+
+            @include responsive("tablet") {
+                  padding: 1.875rem 8.125rem;
+            }
       }
 
       &__img {
@@ -30,6 +56,14 @@
             height: 13.25rem;
             margin-top: 6.5625rem;
             margin-bottom: 6.5625rem;
+
+            @include responsive("tablet") {
+                  height: 23.25rem;
+            }
+
+            @include responsive("laptop") {
+                  height: 45.875rem;
+            }
       }
 
       &__stats {
@@ -37,22 +71,45 @@
             flex-direction: column;
             margin: auto;
 
+            @include responsive("tablet") {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: space-around;
+            }
+
             .stats_content {
                   display: flex;
                   flex-direction: column;
                   margin-bottom: 4.375rem;
+
+                  .stats_icon {
+                        @include responsive("laptop") {
+                              width: 3.125rem;
+                              height: 3.125rem;
+                        }
+                  }
 
                   .stats_number {
                         font-size: 3.875rem;
                         font-weight: 900;
                         color: $dk-Cyan;
                         text-align: left;
+
+                        @include responsive("tablet") {
+                              font-size: 4.5625rem;
+                        }
                   }
 
                   &:nth-child(2) {
-
                         span {
                               font-size: 3.375rem;
+
+                              @include responsive("tablet") {
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-around;
+                                    font-size: 4.5625rem;
+                              }
                         }
                   }
             }

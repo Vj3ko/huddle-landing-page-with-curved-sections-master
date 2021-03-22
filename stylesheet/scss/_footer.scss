@@ -4,6 +4,12 @@
       color: #fff;
       padding: 2.75rem 1.6875rem;
 
+      @include responsive("tablet") {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-around;
+      }
+
       &::before {
             content: "";
             background: url(../../images/bg-footer-top-mobile.svg) top no-repeat;
@@ -13,13 +19,42 @@
             left: 0;
             width: 100%;
             height: 3.125rem;
+
+            @include responsive("tablet") {
+                  background: url(../../images/bg-footer-top-desktop.svg) top
+                        no-repeat;
+                  background-size: 100% 100%;
+                  position: absolute;
+                  top: -8.875rem;
+                  left: 0;
+                  width: 100%;
+                  height: 9.125rem;
+            }
       }
 
-      &__newsletter h4 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+      &__newsletter {
+            
+
+            h4 {
+                  font-size: 1.25rem;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  text-transform: uppercase;
+            }
+
+            p {
+                  @include responsive("laptop") {
+                        padding-right: 10.3125rem;
+                  }
+            }
+
+            @include responsive("tablet") {
+                  flex-basis: 50%;
+            }
+
+            @include responsive("laptop") {
+                  flex-basis: 35%;
+            }
       }
 
       p {
@@ -31,11 +66,46 @@
       form {
             display: flex;
             flex-direction: column;
+            position: relative;
+
+            @include responsive("laptop") {
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: flex-start;
+            }
 
             input {
                   height: 3.125rem;
                   border-radius: 0.3125rem;
                   border: none;
+                  padding-left: 1rem;
+                  color: $dk-Cyan;
+                  font-weight: bold;
+
+                  &:-webkit-autofill {
+                        -webkit-text-fill-color: $dk-Cyan;
+                  }
+
+                  &.error {
+                        border: 1px solid $lt-Red;
+                  }
+
+                  @include responsive("laptop") {
+                        flex-basis: 58%;
+                  }
+            }
+
+            small {
+                  font-size: 0.75rem;
+                  position: absolute;
+                  top: 3.6875rem;
+                  left: 0;
+                  color: $lt-Red;
+                  visibility: hidden;
+
+                  &.error {
+                        visibility: visible;
+                  }
             }
 
             button {
@@ -51,16 +121,44 @@
                   color: #fff;
                   background: $pink;
                   cursor: pointer;
+                  transition: background-color 300ms ease-in-out;
+
+                  &:hover {
+                        background-color: $lt-Pink;
+                  }
+
+                  @include responsive("laptop") {
+                        flex-basis: 35%;
+                        margin-top: 0;
+                  }
             }
       }
 
       &__content {
-            // &_logo {
+            @include responsive("tablet") {
+                  flex-basis: 50%;
+            }
 
-            // }
+            @include responsive("laptop") {
+                  flex-basis: 30%;
+            }
 
             .footer__info {
                   margin-top: 0.625rem;
+
+                  @include responsive("tablet") {
+                        padding-right: 4rem;
+                  }
+
+                  @include responsive("laptop") {
+                        padding-right: 6.25rem;
+                  }
+            }
+
+            &_logo {
+                  @include responsive("laptop") {
+                        width: 15rem;
+                  }
             }
 
             .footer__contact {
@@ -88,12 +186,17 @@
             align-items: center;
 
             i {
-                  font-size: 25px;
+                  font-size: 1.5625rem;
                   cursor: pointer;
+                  transition: color 300ms ease-in-out;
 
                   &:nth-child(1),
                   &:nth-child(2) {
                         margin-right: 1rem;
+                  }
+
+                  &:hover {
+                        color: #02c6f6;
                   }
             }
       }
